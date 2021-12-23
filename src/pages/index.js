@@ -46,7 +46,7 @@ const Home = () => {
           >&nbsp;Welcome!</h1>
         </Row>
         <Row className={styles.primary_container}>
-          <h1 className={styles.primary_container_title} style={{marginLeft: "2vw"}}> How about getting the feel of what we're trying to achieve?</h1>
+          <h1 className={styles.primary_container_title} style={{marginLeft: "2vw"}}> How about getting the feel of what we&apos;re trying to achieve?</h1>
         </Row>
         <Row className={styles.primary_container_graph}>
           <h1 className={styles.primary_container_subtitle}>
