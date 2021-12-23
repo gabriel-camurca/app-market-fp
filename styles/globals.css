@@ -1,3 +1,10 @@
+:root {
+  --old_green: #3ddc84;
+  --green: #3aad85;
+  --black: #000000;
+  --white: #ffffff;
+}
+
 html,
 body {
   padding: 0;
