@@ -86,7 +86,14 @@ const sets = [ {sets: ['Ad Supported'], size: 37757},
         </Row>
         <Row className={styles.primary_container_graph}>
           <h1 className={styles.primary_container_subtitle}>
-            <h2>Even though it&apos;s not realted to our dataset, here&apos;s something fun illustrating things we may be doing in the fulture ;) </h2> <br/>
+            This is a Chart of the different App Ratings for each category!<br/>
+          </h1>
+          <iframe width="50%" height="350" frameBorder="0"
+  src="https://observablehq.com/embed/@gabriel-camurca/vizualizacao-de-dados-app-marketplace?cells=chart_barra"></iframe>
+        </Row>
+        <Row className={styles.primary_container_graph}>
+          <h1 className={styles.primary_container_subtitle}>
+            <h2>Even though it&apos;s not related to our dataset, here&apos;s something fun illustrating things we may be doing in the fulture ;) </h2> <br/>
             This is a graph representing a network of similar songs <br/>
             <i>(psst! You can actually interact with the graph, try it!)</i>
           </h1>
