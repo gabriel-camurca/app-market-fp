@@ -4,7 +4,12 @@ import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 // import android_robot_head from "../../public/android_robot_head.svg"
 
+import {VennDiagram} from 'venn.js'
+import {selectAll, select} from 'd3'
+
 import {Row} from 'antd'
+import Script from 'next/script'
+import { useEffect } from 'react'
 
 const Home = () => {
   // var scroll = window.requestAnimationFrame || function(callback) {window.setTimeout(callback, 1000/60)}
@@ -22,6 +27,30 @@ const Home = () => {
   //   scroll(loopScroll)
   // }
 
+const sets = [ {sets: ['Ad Supported'], size: 37757}, 
+             {sets: ['In App Purchase'], size: 6420},
+             {sets: ['Editors Choice'], size: 24},
+             {sets: ['Ad Supported', 'Editors Choice'], size: 15},
+             {sets: ['In App Purchase', 'Editors Choice'], size: 19},
+             {sets: ['Ad Supported','In App Purchase'], size: 4647},
+             {sets: ['Ad Supported', 'In App Purchase', 'Editors Choice'], size: 13},];
+
+  // var colours = ['darkgreen', 'green', 'black'];
+  var colours = ['#3aad85', '#3ddc84', 'grey'];
+
+  var chart = VennDiagram()
+  .width(600)
+  .height(600)
+
+  useEffect(() => {
+    select("#venn").datum(sets).call(chart)
+    selectAll("#venn .venn-circle path")
+    .style("fill-opacity", 0.9)
+    .style("fill", function(d,i) { return colours[i]; });
+
+    selectAll("#venn text").attr("transform", "translate(-40)").style("fill", "white");
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -32,6 +61,7 @@ const Home = () => {
       <header></header>
 
       <main className={styles.main}>
+        <Script src="../../scripts/venn_diagram.js" strategy='beforeInteractive'></Script>
         <Row className={styles.title_container}>
           <h1 className={styles.title} >Data Visualization - Final Project</h1>
           {/* <Image src={android_robot_head} alt="" width={"256px"} height={"256px"} className={styles.img_test} /> */}
@@ -50,6 +80,13 @@ const Home = () => {
         </Row>
         <Row className={styles.primary_container_graph}>
           <h1 className={styles.primary_container_subtitle}>
+            This is a Venn Diagram of the different App income methods!<br/>
+          </h1>
+          <svg id="venn" width="600px" height="600px"></svg>
+        </Row>
+        <Row className={styles.primary_container_graph}>
+          <h1 className={styles.primary_container_subtitle}>
+            <h2>Even though it&apos;s not realted to our dataset, here&apos;s something fun illustrating things we may be doing in the fulture ;) </h2> <br/>
             This is a graph representing a network of similar songs <br/>
             <i>(psst! You can actually interact with the graph, try it!)</i>
           </h1>

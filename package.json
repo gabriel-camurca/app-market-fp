@@ -9,11 +9,14 @@
   },
   "dependencies": {
     "antd": "^4.17.4",
+    "d3": "^7.3.0",
     "next": "12.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "venn.js": "^0.2.20"
   },
   "devDependencies": {
+    "@types/d3": "^7.1.0",
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "eslint": "8.5.0",
