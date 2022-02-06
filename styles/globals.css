@@ -3,6 +3,14 @@
   --green: #3aad85;
   --black: #000000;
   --white: #ffffff;
+
+  --darker_green: #05803C;
+  --purple: #5D53DB;
+  --light_green: #3DDB84;
+  --red: #DB3727;
+  --yellow: #DBC132;
+
+  --background_blue: #007A78;
 }
 
 html,
