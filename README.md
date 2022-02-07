@@ -5,6 +5,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Install the dependencies:
 
 ```bash
+yarn add "https://api.observablehq.com/@gabriel-camurca/vizualizacao-de-dados-app-marketplace.tgz?v=3"
+
 yarn install
 ```
 
