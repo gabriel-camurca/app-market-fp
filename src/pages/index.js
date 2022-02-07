@@ -13,6 +13,7 @@ import {CalendarGraph} from '../components/CalendarGraph.js'
 import {CategoryRank} from '../components/CategoryRank.js'
 import {RatingGraph} from '../components/RatingGraph.js'
 import {LollipopChart} from '../components/LollipopChart.js'
+import {MoneyGraph} from '../components/MoneyGraph.js'
 
 import {VennDiagram} from 'venn.js'
 import {selectAll, select} from 'd3'
@@ -141,7 +142,15 @@ const sets = [ {sets: ['Ad Supported'], size: 37757},
           <Installs></Installs>
         </PrimarySection>
 
-        
+        <PrimarySection title="Cost Comparison">
+          <MoneyGraph></MoneyGraph>
+        </PrimarySection>
+        <hr width="100%" className={styles.line_upper}/>
+        <Row className={styles.terciary_container}>
+          <h1 className={styles.terciary_text}>A question that arose during the analysis of the data was the following: "How much would it cost to have all the paid apps on the Playstore?". With that we decided to make a comparison with getting all products from other types of virtual stores. It&apos;s a good moment to be a fan League of Legends isn&apos;t it?
+          </h1>
+        </Row>
+        <hr width="100%" className={styles.line_bottom}/>
 
         {/* <Row className={styles.secondary_container}>
           <h1 className={styles.secondary_container_subtitle}>
