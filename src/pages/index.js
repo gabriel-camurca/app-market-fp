@@ -94,7 +94,7 @@ const sets = [ {sets: ['Ad Supported'], size: 37757},
         </Row>
         <hr width="100%" className={styles.line_bottom}/>
 
-        <PrimarySection title="Category By Price">
+        <PrimarySection title="Apps per Age Group">
           <CategoriesByPrice></CategoriesByPrice>
         </PrimarySection>
 
